@@ -26,9 +26,11 @@ actualizarElem 2 mult2 [4, 5, 6, 7, 8] = zipWith (\i x -> if i == 2 then mult2 x
 - se verifica la condición \i x -> if i == 2 then mult2 x else x
 - (2,6): if 2 == 2 then mult2 6 else 6 => 12
 - devuelve como lista [4, 5, 12, 7, 8]
+
+https://learnyouahaskell.github.io/higher-order-functions.html#composition (ctrl+f zipwith)
 -}
 
--- https://learnyouahaskell.github.io/higher-order-functions.html#composition (ctrl+f zipwith)
+
 
 -- | infinito positivo (Haskell no tiene literal para +infinito)
 infinitoPositivo :: Float
