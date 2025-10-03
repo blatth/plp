@@ -94,7 +94,7 @@ const :: a -> b -> a
 
 ## Ejercicio 1
 
-![Consigna ejercicio 1](image.png)
+![Consigna ejercicio 1](img/image.png)
 
 ### 1. I
 
@@ -152,7 +152,7 @@ Bueno, las resoluciones siguientes (de flip y de curry) son análogas a lo anter
 
 ## Ejercicio 2
 
-![Consigna ejercicio 2](image-1.png)
+![Consigna ejercicio 2](img/image-1.png)
 
 ### 2. I
 
@@ -416,7 +416,7 @@ elem e (x:xs)
 
 ## Ejercicio 4
 
-![alt text](image-2.png)
+![Consigna ejercicio 4](img/image-2.png)
 
 ### 4. I
 
@@ -465,7 +465,7 @@ Lo anterior está incompleto (y probablemente mal), lo dejo para después
 
 ## Ejercicio 6
 
-![Consigna ejercicio 6](image-3.png)
+![Consigna ejercicio 6](img/image-3.png)
 
 Demostración de `zip = zip'` por **inducción estructural** y **principio de extensionalidad**
 
@@ -650,7 +650,7 @@ zip' (x':xs) ys
 
 ## Ejercicio 7
 
-![Consigna ejercicio 7](image-4.png)
+![Consigna ejercicio 7](img/image-4.png)
 
 ### Definiciones a usar
 
@@ -902,7 +902,7 @@ elem e ((x:xs)++ys)
 
 ## Ejercicio 10
 
-![alt text](image-5.png)
+![Consigna ejercicio 10](img/image-5.png)
 
 Dado lo siguiente
 
