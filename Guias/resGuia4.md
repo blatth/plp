@@ -2,7 +2,7 @@
 
 ## Ejercicio 1
 
-![Consigna ejercicio 1](image-6.png)
+![Consigna ejercicio 1](img/image-6.png)
 
 - **a.** Expresión válida: de término
 - **b.** Expresión válida: de término. Es una aplicación.
@@ -24,7 +24,7 @@
 
 ## Ejercicio 3
 
-![Consigna ejercicio 3](image-7.png)
+![Consigna ejercicio 3](img/image-7.png)
 
 ### 3. a
 
@@ -46,7 +46,7 @@ La expresión dada se parsea como $(u x)(y z)$, ya que la asociativiad en la apl
 
 ## Ejercicio 4
 
-![Consigna ejercicio 4](image-8.png)
+![Consigna ejercicio 4](img/image-8.png)
 
 ### 4. a
 
@@ -111,7 +111,7 @@ Este punto es prácticamente lo mismo que el anterior, por lo que lo voy a skipe
 
 ## Ejercicio 6 (derivaciones)
 
-![Consigna ejercicio 6](image-9.png)
+![Consigna ejercicio 6](img/image-9.png)
 
 ### 6. a
 
@@ -161,7 +161,7 @@ Esta es inválida porque `(λx : Bool. x)` debería esr de tipo *Bool* según la
 
 ## Ejercicio 9
 
-![Consigna ejercicio 9](image-10.png)
+![Consigna ejercicio 9](img/image-10.png)
 
 ### 9. b
 
@@ -198,7 +198,7 @@ Planteo la siguiente expresión:
 
 ## Ejercicio 10
 
-![Consigna ejercicio 10](image-11.png)
+![Consigna ejercicio 10](img/image-11.png)
 
 ### 10. a
 
@@ -249,7 +249,7 @@ y : τ ⊢ (λx : σ. x): Bool        y : τ ⊢ y : σ  ★₂    y : τ ⊢ su
 
 > Rec: La operación de reemplazo se aplica *solo* sobre las varaibles libres, no las ligadas, por lo que voy a renombrar las ligadas para tener mayor claridad y no confundirme.
 
-![Consigna ejercicio 13](image-12.png)
+![Consigna ejercicio 13](img/image-12.png)
 
 ### 13. a
 
@@ -267,7 +267,7 @@ Renombro: `(y (λz : σ. x z))` --- M{x := n} ⟶ `(y (λz : σ. (λy : τ. v y)
 
 ### 20. a
 
-![Consigna ejercicio 20](image-13.png)
+![Consigna ejercicio 20](img/image-13.png)
 
 #### ¿Qué es una regla de tipado?
 

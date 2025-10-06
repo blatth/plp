@@ -19,7 +19,7 @@ mayor o igual a 0.
 - En el caso del constructor Secuencia, la segunda melodía empieza inmediatamente cuando finaliza la primera.
 - En el caso de Paralelo, todas las melodías suenan simultáneamente. Suponemos que `Paralelo []` no es una melodía válida.
 
-![Consigna ejercicio 1](image-14.png)
+![Consigna ejercicio 1](img/image-14.png)
 
 ### 1. I
 
@@ -250,5 +250,5 @@ $$ρ ⇒ (σ ∨ (ρ ⇒ τ )) ⇒ (σ ∨ τ)$$
 -- Γ = ρ, (σ ∨ (ρ ⇒ τ ))
 ```
 
-![Reglas de deducción natural](image-15.png)
+![Reglas de deducción natural](img/image-15.png)
 
