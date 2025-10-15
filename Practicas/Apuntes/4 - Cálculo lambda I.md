@@ -1,6 +1,8 @@
-# Sintaxis
+# Cálculo λ
 
-$$M ::= x\ | \lambda x:\sigma .M\ | MM\ | true\ | false\ | if\ M\ then\ M\ else\ M$$
+## Sintaxis
+
+$$M ::= x\ | λ x:σ .M\ | MM\ | true\ | false\ | if\ M\ then\ M\ else\ M$$
 
 - fv(x) = {x}
 - fv(true) = ∅

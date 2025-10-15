@@ -1,3 +1,7 @@
+# Cálculo- λᵇ: sintaxis y tipado
+
+---
+
 >  [Diapos de la teórica](https://github.com/blatth/plp/blob/main/Teoricas/Teorica5.pdf)
 
 Rama **semántica** de la materia.
@@ -9,8 +13,6 @@ El **cálculo lambda** se basa en construir funciones y aplicarlas: el fundament
 ★ **Lógica lineal**
 
 ---
-
-# Cálculo- λᵇ : sintaxis y tipado
 
 $\tau$, $\sigma$,... son letra utilizadas para darle nombre a diferentes tipos, por ej:
 

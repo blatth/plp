@@ -1,3 +1,4 @@
+# Razonamiento ecuacional
 
 | Razonamiento ecuacional | Deducción natural                 |
 | ----------------------- | --------------------------------- |
@@ -5,18 +6,18 @@
 
 ---
 
-
 ```haskell
 map f (map g xs) -> map (f . g) xs
 ```
 
 Es válido afirmar esto en un lenguaje funcional, sin tener cuidado, ya que los maps no pueden tener efectos, entonces aplicarlos siempre será lo mismo. Al contrario que el _paradigma imperativo_.
 
-### ¿Qué se va a asumir de ahora en más, para el razonamiento ecuacional y la inducción estructural?
+## ¿Qué se va a asumir de ahora en más, para el razonamiento ecuacional y la inducción estructural?
 
 - Se trabajará con **tipos de datos inductivos** (o lo que es lo mismo, estructuras de datos finitas)
 - Se trabajará con **funciones totales**
 - Se trabajará asumienod que el programa **no depende** del orden de las ecuaciones, ex:
+  
 ```haskell
 	vacia [] = True -> vacia [] = True
 	vacia _ = False -> vacia (_:_) = False
@@ -37,6 +38,7 @@ Se tiene el **principio de inducción estructural**:
 > - $P$ vale sobre todos los constructores recursivos de T, asumiendo que la HI vale para los parámetros de tipo T.
 
 **EJEMPLOS EN DIAPOS 15-18**: parece ser bastante mecánico, aunque hay detalles como el ejemplo del foldr/foldl.
+
 ### **Ejemplo de inducción sobre listas**
 
 Para que se "destraben" las listas, conviene hacer inducción en `xs` ya que A0/A1 está definida con inducción en xs y M0/M1 también.
@@ -50,10 +52,9 @@ $$Si \ g::b \rightarrow a \rightarrow b \rightarrow b, \ z::b, \ x::a, \ xs::[a]
 foldl g < (xs ++ [x]) = g (foldl g z xs) x
 ```
 
-![[Pasted image 20250905200237.png]]
 ## Inducción sobre booleanos
 
-**Principio de inducción sobre booleanos**
+### **Principio de inducción sobre booleanos**
 
 $$Si \: P(True) \ y \ P(False) \Rightarrow \forall x:: Bool. \ P(x)$$
 
@@ -73,7 +74,7 @@ No puedo reemplazar directamente
 
 ## Inducción sobre pares
 
-**Principio de inducción sobre pares**
+### **Principio de inducción sobre pares**
 
 $$\forall x::a. \ \forall y::b. \ P((x,y)) \Rightarrow \forall p::(a,b). \ P(p)$$
 
@@ -89,7 +90,6 @@ $$P(n) :=(suma \, n \, Zero = n)$$
 basta ver que:
 
 $$\forall n :: Nat. \, (P(n) \Rightarrow P(Suc \, n))$$
-
 
 ## Extensionalidad
 

@@ -1,3 +1,5 @@
+## Razonamiento ecuacional
+
 ## Ejercicio 1
 
 Tengo las siguientes propiedades:

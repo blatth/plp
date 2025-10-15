@@ -154,7 +154,6 @@ Recursivamente se calcula:
 
 A partir de lo anterior, se define el algoritmo recursivo:
 
-
 $$\Im(\Gamma \ | \ M) = (\tau \ | \ E)$$
 
 donde:
@@ -166,7 +165,7 @@ donde:
 
 #### Definición de las restricciones
 
-[![Restricciones](../../.img/image-17.png)](https://campus.exactas.uba.ar/pluginfile.php/158586/mod_resource/content/1/PLP07.pdf#page=21)
+[![Restricciones](../../.img/image-17.png)](../Teorica6.pdf#page-21)
 
 ---
 
