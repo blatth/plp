@@ -1,5 +1,11 @@
 # Cálculo λ
 
+| Cálculo lambda                                                                                             |
+| ---------------------------------------------------------------------------------------------------------- |
+| [Cap. 5 y 9 de Pierce](../Recursos/Teo5.pdf) - [Cap. 1 y 3 de Sørensen & Urzyczyn](../Recursos/Teo5_2.pdf) |
+
+---
+
 ## Sintaxis
 
 $$M ::= x\ | λ x:σ .M\ | MM\ | true\ | false\ | if\ M\ then\ M\ else\ M$$

@@ -1,5 +1,12 @@
 # Funcional II
 
+## Lecturas recomendadas
+
+| Programación funcional 							 | Esquemas de recursión 												|
+| -------------------------------------------------- | -------------------------------------------------------------------- |
+| [Cap. 4 de Bird](../../Teoricas/Recursos/Teo1.pdf) | [Expressiveness of fold de Hutton](../../Teoricas/Recursos/Teo2.pdf) |
+---
+
 ## Función elem
 1. Implementar la función "elem" que dice si un elemento pertenece, o no, a una lista.
 
