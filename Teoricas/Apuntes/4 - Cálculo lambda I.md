@@ -1,5 +1,11 @@
 # Cálculo- λᵇ: sintaxis y tipado
 
+## Lecturas recomendadas
+
+| Cálculo lambda                                                                                             |
+| ---------------------------------------------------------------------------------------------------------- |
+| [Cap. 5 y 9 de Pierce](../Recursos/Teo5.pdf) - [Cap. 1 y 3 de Sørensen & Urzyczyn](../Recursos/Teo5_2.pdf) |
+
 ---
 
 >  [Diapos de la teórica](https://github.com/blatth/plp/blob/main/Teoricas/Teorica5.pdf)

@@ -1,8 +1,10 @@
 # Razonamiento ecuacional
 
-| Razonamiento ecuacional | Deducción natural                 |
-| ----------------------- | --------------------------------- |
-| Cap. 6 de Bird          | Cap. 2 y 6 de Sørensen y Urzyczyn |
+## Lecturas recomendadas
+
+| Razonamiento ecuacional 				 | Deducción natural																						  |
+| ----------------------- 				 | -----------------------------------------------------------------------------------------------------------|
+| [Cap. 6 de Bird](../Recursos/Teo3.pdf) | [Cap. 1 Huth & Ryan](../Recursos/Teo3_2.pdf) - [Cap. 2 y 6 de Sørensen & Urzyczyn](../Recursos/Teo3_3.pdf) |
 
 ---
 

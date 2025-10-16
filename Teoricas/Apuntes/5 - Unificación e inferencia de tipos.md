@@ -1,5 +1,13 @@
 # Unificación e inferencia de tipos
 
+## Lecturas recomendadas
+
+| Inferencia de tipos                       | Unificación                                             |
+| ----------------------------------------- | ------------------------------------------------------- |
+| [Cap. 22 de Pierce](../Recursos/Teo6.pdf) | [Secc. 4.6 de Baader & Nipknow](../Recursos/Teo6_2.pdf) |
+
+---
+
 ## Problema de inferencia de tipos
 
 > Se usará $U$ para términos **sin** anotaciones de tipos y se seguirá utilizando $M$ para términos **con** anotaciones de tipos.
