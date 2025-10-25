@@ -50,16 +50,70 @@ Acá dejo el [machete](../../Recursos/Machete-DNatLPO.pdf) de las reglas de dedu
 - $E$ = regla de eliminación
   - $X \notin fv(\Gamma, τ)$ sigue la misma noción que lo anterior. En este caso es usado en la definición de $\exists_E$.
 
-#### Ejemplos de la teórica
+#### Cuantificación universal
 
-##### Cuantificación universal
+##### Ejemplo 1
 
-![ej1](../../.img/image-18.png)
+```haskell
+--------------------------------------- AX
+∀X . (P(X) ∧ Q(X)) ⊢ ∀X . (P(X) ∧ Q(X))
+------------------------------------------- ∀E
+∀X . (P(X) ∧ Q(X)) ⊢ P(cos(X)) ∧ Q(cos(X))
+------------------------------ ∧E_1
+∀X . (P(X) ∧ Q(X)) ⊢ P(cos(X))
+----------------------------------- ∀I
+∀X . (P(X) ∧ Q(X)) ⊢ ∀X . P(cos(X))
+-------------------------------------- ⇒I
+⊢ ∀X . (P(X) ∧ Q(X)) ⇒ ∀X . P(cos(X))
+```
 
-![ej2](../../.img/image-19.png)
+#### Ejemplo 2
 
-##### Cuantificación existencial
+```haskell
+------------------------------------------ AX
+P(X), ∀X . ∀Y . Q(X, Y) ⊢ ∀Z. ∀Y . Q(Z, Y)
+------------------------------------- ∀E
+P(X), ∀X . ∀Y . Q(X, Y) ⊢ ∀Y. Q(Z, Y)
+--------------------------------- ∀E 
+P(X), ∀X . ∀Y . Q(X, Y) ⊢ Q(Z, Y) 
+------------------------------------- ∀I
+P(X), ∀X . ∀Y . Q(X, Y) ⊢ ∀Z. Q(Z, Y)           -- -> sustituyo X y ∀X por Z
+----------------------------------------- ∀I
+P(X), ∀X . ∀Y . Q(X, Y) ⊢ ∀Y. ∀X. Q(X, Y)
+```
 
-![ej3](../../.img/image-20.png)
+#### Cuantificación existencial
 
-![ej4](../../.img/image-21.png)
+##### Ejemplo 1
+
+```haskell
+            ------------------------- AX
+            σ, P(W, W), Q(X) ⊢ P(W, W) 
+            ---------------------------- ⇒I
+            σ, P(W, W) ⊢ Q(X) ⇒ P(W, W) 
+            ----------------------------------- ∃I
+            σ, P(W, W) ⊢ ∃Z. (Q(X) ⇒ P(W, Z)) 
+----- ax    -------------------------------------- ∃I
+σ ⊢ σ       σ, P(W, W) ⊢ ∃Y. ∃Z. (Q(X) ⇒ P(Y, Z))
+----------------------------------------- ∃E
+∃X W. P(W, W) ⊢ ∃Y. ∃Z. (Q(X) ⇒ P(Y, Z))
+
+-- σ :≡ ∃W. P(W, W)
+```
+##### Ejemplo 2
+
+```haskell
+
+            ------------------------ AX
+            σ, P(cos(X)) ⊢ P(cos(X))
+            ------------------------------------ ∨I_1
+            σ, P(cos(X)) ⊢ P(cos(X)) ∨ Q(cos(X)) 
+----- AX    --------------------------------- ∃I
+σ ⊢ σ       σ, P(cos(X)) ⊢ ∃X . (P(X) ∨ Q(X))
+--------------------- ∃E
+σ ⊢ ∃X. (P(X) ∨ Q(X)) 
+------------------------------------ ⇒I
+⊢ ∃X. P(cos(X)) ⇒ ∃X. (P(X) ∨ Q(X))
+
+-- σ :≡ ∃X. P(cos(X))
+```
