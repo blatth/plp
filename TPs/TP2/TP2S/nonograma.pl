@@ -64,42 +64,42 @@ coincide_con_celdas([X|Xs], [C|Cs]) :-
 
 % Caso base -> hay una sola restricción [H], y la lista L debe tener al menos H celdas
 pintadasValidas(r([H], L)) :-
-    length(L, N),
-    N >= H,
-    replicar(x, H, Pintadas),
-    K is N - H,
-    between(0, K, U),               	% blancos antes
-    replicar(o, U, Anterior),
-    V is K - U,                      	% blancos después
-    replicar(o, V, Posterior),
-    append(Anterior, Pintadas, L1),
-    append(L1, Posterior, Lista),
-    coincide_con_celdas(Lista, L),
-    L = Lista.
+    length(L, N),                       % longitud de L = lista de celdas
+    N >= H,                             % debe haber al menos H celdas
+    replicar(x, H, Pintadas),           % se crean las H celdas pintadas
+    K is N - H,                      	% K = cantidad de celdas restantes (blancas)
+    between(0, K, U),               	% U = cantidad de blancas antes
+    replicar(o, U, Anterior),           % se crean las U celdas blancas antes
+    V is K - U,                      	% V = cantidad de blancas después
+    replicar(o, V, Posterior),          % se crean las V celdas blancas después
+    append(Anterior, Pintadas, L1),     % L1 = Anterior ++ Pintadas
+    append(L1, Posterior, Lista),       % Lista = L1 ++ Posterior = Anterior ++ Pintadas ++ Posterior
+    coincide_con_celdas(Lista, L),      % se valida que Lista coincide con L
+    L = Lista.                          % se unifaca L con Lista para evitar soluciones múltiples
 
 % Caso recursivo -> restricción [H | T], y la lista L debe tener al menos H + 1 celdas
 pintadasValidas(r([H | T], L)) :-
-    length(L, N),
-    N >= H + 1,                     	% debe haber al menos un o entre bloques
-    replicar(x, H, Pintadas),
+    length(L, N),                      	% longitud de L = lista de celdas
+    N >= H + 1,                     	% debe haber al menos H + 1 celdas
+    replicar(x, H, Pintadas),           % se crean las H celdas pintadas
     
     % se divide L en: Anterior ++ Pintadas ++ [o] ++ Resto
-    append(Anterior, Resto1, L),
-    append(Pintadas, [o], Bloque),
-    append(Bloque, Resto, Resto1),
+    append(Anterior, Resto1, L),        % L = Anterior ++ Resto1 = Anterior ++ Pintadas ++ [o] ++ Resto
+    append(Pintadas, [o], Bloque),      % Bloque = Pintadas ++ [o]
+    append(Bloque, Resto, Resto1),      % Resto1 = Bloque ++ Resto
 
     % validar parcial
-    append(Anterior, Bloque, Parcial),
-    coincide_con_celdas(Parcial, L),
+    append(Anterior, Bloque, Parcial),  % Parcial = Anterior ++ Pintadas ++ [o]
+    coincide_con_celdas(Parcial, L),    % se valida que Parcial coincide con L, 
 
     % se calcula la longitud disponible para el resto de restricciones
-    length(Anterior, U),
-    Usados is U + H + 1,
-    NRest is N - Usados,
+    length(Anterior, U),                % U = cantidad de celdas blancas antes
+    Usados is U + H + 1,                % Usados = celdas usadas = U (blancas antes) + H (pintadas) + 1 (blanca entre bloques)
+    NRest is N - Usados,                % NRest = celdas restantes para el resto de restricciones
     NRest >= 0,
 
     % eñ resto debe tener exactamente NRest celdas
-    length(Resto, NRest),
+    length(Resto, NRest),               % se fuerza que Resto tenga NRest celdas
 
     % se resuelve recursivamente el resto
     pintadasValidas(r(T, Resto)).
