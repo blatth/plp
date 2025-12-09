@@ -90,3 +90,56 @@ caminoDeNPasos(P, [P|T], Pasos) :-
 caminoDesde(P, C) :-
     between(0, inf, Pasos),             % Genero pasos (núms naturales) de 0 a inf
     caminoDeNPasos(P, C, Pasos).        % Llamo a la auxiliar para que corra infinitamente
+
+% Ej 1
+
+subsecuenciaCreciente(L, S) :-
+    subsecuencia(L, S),
+    esCreciente(S).
+
+% Lista1 = L1 = [H|T1], Lista2 = L2 = [H|T2] 
+
+subsecuencia([], []).
+subsecuencia([H|T1], [H|T2]) :-
+    subsecuencia(T1, T2).
+subsecuencia([_|T1], L2) :-
+    subsecuencia(T1, L2).
+
+esCreciente([]).
+esCreciente([_]).
+esCreciente([A,B|T]) :-
+    A < B,
+    esCreciente([B|T]).
+
+% Ej 2
+
+subsecuenciaMasLarga(L, S) :-
+    subsecuenciaCreciente(L, S),       % candidato S1
+    length(S, N1), 
+    not((
+        subsecuenciaCreciente(L, S2),   % candidato S2
+        length(S2, N2),
+        N2 > N1
+    )).
+
+% Ej 3
+
+fibonacci(X) :-
+    fibonacci_aux(0, 1, X).
+
+fibonacci_aux(_, Act, Act).
+fibonacci_aux(Ant, Act, X) :-
+    Siguiente is Ant + Act,
+    fibonacci_aux(Act, Siguiente, X).
+
+generarCapicuas(L) :-
+    between(1, inf, N),         % genero N = 1 -> inf
+    listaQueSuma(N, L),         % llamo al generador de listas que suman N
+    reverse(L, L).              % verifico que sea capicua
+
+listaQueSuma(0, []).            % si la lista suma 0 => es la vacía
+listaQueSuma(N, [H|T]) :-       
+    N > 0,                      % me aseguro que N > 0
+    between(1, N, H),           % genero N = 1 -> inf y los pongo en la pos de H
+    Resto is N - H,             % calculo Nresto
+    listaQueSuma(Resto, T).     % llamo al tail con nresto
